@@ -1,0 +1,23 @@
+<!-- templates/display.html -->
+{% extends "base.html" %}
+{% block content %}
+<h2>上传数据展示</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>列1</th>
+            <th>列2</th>
+            <th>列3</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.column1 }}</td>
+            <td>{{ item.column2 }}</td>
+            <td>{{ item.column3 }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
